@@ -1,0 +1,11 @@
+{
+  "name": "dice",
+  "version": "1.0.0",
+  "description": "Code to roll six-sided dice",
+  "main": "index.js",
+  "scripts": {
+    "test": "\u001b[A\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001bdice)\u001b[B\u001b[D\u001b[D\u001b[A\u001b[C\u001b[C"
+  },
+  "author": "",
+  "license": "ISC"
+}

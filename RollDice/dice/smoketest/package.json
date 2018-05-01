@@ -1,0 +1,11 @@
+{
+  "name": "smoketest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "Color"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "dice-sim",
+  "version": "1.0.0",
+  "description": "",
+  "main": "diceroll.js",
+  "scripts": {
+    "test": "jest --color"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arr262/Dice-Sim.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arr262/Dice-Sim/issues"
+  },
+  "homepage": "https://github.com/Arr262/Dice-Sim#readme",
+  "devDependencies": {
+    "jest": "^22.4.3"
+  }
+}
