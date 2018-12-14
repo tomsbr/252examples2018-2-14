@@ -3,6 +3,8 @@
 import random
 
 
+from blackjack_functions import hit, result
+
 
 def play_game():
     print("Welcome to Blackjack")
@@ -22,19 +24,39 @@ def play_game():
 
         # House Cards
         while len(house_cards) != 2:
-            house_cards.append(random.randint(1, 11))
+            house_cards.append(hit())
             if len(house_cards) == 2:
                 print("Dealer has X &", house_cards[1])
 
         # Players Cards
         while len(players_cards) != 2:
-            players_cards.append(random.randint(1, 11))
+            players_cards.append(hit())
             if len(players_cards) == 2:
                 print("You have ", players_cards)
 
+        #complete players hands
+        while sum(players_cards) < 21:
+            action_taken = str(input("Do you want to stay or hit?"))
+            if action_taken == "hit":
+                players_cards.append(hit())
+
+         while sum(house_cards) < 17:
+             house_cards.append(hit())
+
+        #get result
+        res = result(player_hand, house_hand)
+
+        #output result
+        elif "bust" == res or "lose" == res:
+            dealers_score += 1
+        elif "blackjack" == res or "win" == res:
+            dealers_score += 1
+        else: "push" == res 
+            dealers_score += 1
+
         # Sum of the House Cards
         if sum(house_cards) == 21:
-            house_score += 1
+            dealer_score += 1
             print("The House has 21 and wins!")
         elif sum(house_cards) > 21:
             players_score += 1
@@ -44,7 +66,7 @@ def play_game():
         while sum(players_cards) < 21:
             action_taken = str(input("Do you want to stay or hit?"))
             if action_taken == "hit":
-                players_cards.append(random.randint(1, 11))
+                players_cards.append(hit())
                 print("You now have a total of " + str(sum(players_cards)) + " from these cards ", players_cards)
             else: 
                 print("The dealer has a total of " + str(sum(house_cards)) + " with ", house_cards)
